@@ -151,7 +151,7 @@ class Robot:
 
         orn = p.getQuaternionFromEuler([math.pi/30*0, 0*math.pi/50, 0])
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
-        planeUid = p.loadURDF("plane_transparent.urdf", [0, 0, 0], orn)
+        planeUid = p.loadURDF("plane.urdf", [0, 0, 0], orn)
         p.changeDynamics(planeUid, -1, lateralFriction=1)
         texUid = p.loadTexture("concrete.png")
         p.changeVisualShape(planeUid, -1, textureUniqueId=texUid)
